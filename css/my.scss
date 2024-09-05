@@ -1,0 +1,20 @@
+//자주 등장하는 스타일 값(변수)
+$actvieColor: #ea1616;
+$actvieDeep : #c27474;
+
+body{
+    *{
+        font-family: "Montserrat", "Pretendard", sans-serif;
+        font-weight: 400; 
+    }
+}
+
+h1,h2,h3,h4,p,ul,li,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $actvieColor;
+}
