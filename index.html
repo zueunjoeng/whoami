@@ -22,8 +22,8 @@
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" /> -->
         <!-- 프리텐다드 전체 웹폰트 -->
         <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
 
@@ -32,32 +32,206 @@
 
         <!-- 정주은 제작 css -->
         <link href="css/my.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg bg-transparent fixed-top" id="mainNav">
             <div class="container">
-                <h1>
                     <a class="navbar-brand" href="#page-top">
-                        <!-- <img src="assets/img/navbar-logo.svg" alt="..." /> -->
-                        나의 svg 로고 생성
-                    </a>
-                </h1>
+                        <img src="assets/img/logos/logo.png" alt="정주은" />
+                    </a>   
+                    
+                    <div class="d-flex align-items-center m-0 me-5 ms-5">
+                    <h1 class='pt-1'><a href=""><img src="/img/logo.png" alt="" /></a></h1>
+                    <p class='m-0 ms-2 fw300'>가능성에 <span class='fw900'>무한함</span>을</p>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="" href="http://www.github.com/zueunjoeng">Git</a></li>
-                    </ul>
+                        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0 navbar d-flex p-0 pt-1 mb-0 me-0 ms-auto fw300 align-items-center">
+                            <li  class="nav-item ms-2">
+                                <a class="nav-link" href="#aboutme">ABOUT ME</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#project">PROJECT</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#community">COMMUNITY</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#contact">CONTACT</a>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </nav>
+        <!-- 메인배너 -->
+        <div id="mainbanner" class="d-flex justify-content-between px-5">
+            <div class="d-flex justify-content-around align-items-end pb-5">
+                <div class="d-flex flex-column justify-content-around align-items-start">
+                <p>Hi!</p>
+                <P>I'm Jeong Ju Eun</P>
+                <p class="changing-text">And, I'm a Challenger </P>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center ">
+                <div class="divpost d-flex flex-column justify-content-center">
+                    <div class="d-flex align-items-center nav-item ms-4 mb-4">
+                        <span class="spanbox bg-transparent me-3"></span>
+                        <a href="">가능성에 무한함을</a>
+                    </div>
+                    <div class="d-flex align-items-center nav-item ms-4 mb-4">
+                        <span class="spanbox bg-transparent me-3"></span>
+                        <a class="nav-link" href="#aboutme">ABOUT ME</a>
+                    </div>
+                    <div class="d-flex align-items-center nav-item ms-4 mb-4">
+                        <span class="spanbox bg-transparent me-3"></span>
+                        <a class="nav-link" href="#project">PROJECT</a>
+                    </div>
+                    <div class="d-flex align-items-center nav-item ms-4 mb-4">
+                        <span class="spanbox bg-transparent me-3"></span>
+                        <a class="nav-link" href="#community">COMMUNITY</a>
+                    </div>
+                    <div class="d-flex align-items-center nav-item ms-4 mb-4">
+                        <span class="spanbox bg-transparent me-3"></span>
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        
+        <script>
+            const texts = ["Project Manager", "Content Marketer", "Web Publisher", "Challenger"];
+            let index = 0;
+            
+            function changeText() {
+                const textElement = document.querySelector(".changing-text");
+                textElement.textContent = "And, I'm a " + texts[index];
+                index = (index + 1) % texts.length;
+            }
+    
+            setInterval(changeText, 3000);
+        </script>
+
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About ME</h2>
+                    <h3 class="section-subheading text-muted">#긍정적인 행동파 #ENTJ #신뢰감 상승 눈빛</h3>
+                </div>
+                <div class="row">
+                        <div class="team-member">
+                            <img class="mx-auto" src="assets/img/team/aboutme.jpg" alt="웃고 있는 정주은" />
+                            <h4>정주은(23세)</h4>
+                            <p class="text-muted"></p>                         
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="인스타그램"><i class="bi bi-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="카카오톡"><i class="bi bi-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="윗챗"><i class="bi bi-wechat"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="깃허브"><i class="bi bi-github"></i></a>
+                        </div>
+                </div>
+            </div>
+        </section>
+         <!-- project Grid-->
+        <section class="page-section bg-light" id="project">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">project</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- 1번 -->
+                        <div class="swiper-slide col-lg-4 col-sm-6 mb-4">
+                            <div class="project-item">
+                                <a class="project-link" data-bs-toggle="modal" href="#projectModal1">
+                                    <div class="project-hover">
+                                        <div class="project-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    </div>
+                                    <img class="img-fluid" src="assets/img/project/1.jpg" alt="..." />
+                                </a>
+                                <div class="project-caption">
+                                    <div class="project-caption-heading">Tving</div>
+                                    <div class="project-caption-subheading text-muted">React</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2번 -->
+                        <div class="swiper-slide col-lg-4 col-sm-6 mb-4">
+                            <div class="project-item">
+                                <a class="project-link" data-bs-toggle="modal" href="#projectModal1">
+                                    <div class="project-hover">
+                                        <div class="project-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    </div>
+                                    <img class="img-fluid" src="assets/img/project/1.jpg" alt="..." />
+                                </a>
+                                <div class="project-caption">
+                                    <div class="project-caption-heading">와요(WAYO)</div>
+                                    <div class="project-caption-subheading text-muted">독립형 홈페이지</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3번 -->
+                        <div class="swiper-slide col-lg-4 col-sm-6 mb-4">
+                            <div class="project-item">
+                                <a class="project-link" data-bs-toggle="modal" href="#projectModal1">
+                                    <div class="project-hover">
+                                        <div class="project-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    </div>
+                                    <img class="img-fluid" src="assets/img/project/1.jpg" alt="..." />
+                                </a>
+                                <div class="project-caption">
+                                    <div class="project-caption-heading">루펫</div>
+                                    <div class="project-caption-subheading text-muted">CMS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4번 -->
+                        <div class="swiper-slide col-lg-4 col-sm-6 mb-4">
+                            <div class="project-item">
+                                <a class="project-link" data-bs-toggle="modal" href="#projectModal1">
+                                    <div class="project-hover">
+                                        <div class="project-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    </div>
+                                    <img class="img-fluid" src="assets/img/project/1.jpg" alt="..." />
+                                </a>
+                                <div class="project-caption">
+                                    <div class="project-caption-heading">도미노</div>
+                                    <div class="project-caption-subheading text-muted">VIDEO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                </div>
+
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                        loop: true,
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    });
+                </script>
+            </div>
+        </section>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 

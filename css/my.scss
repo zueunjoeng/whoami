@@ -4,17 +4,87 @@ $actvieDeep : #c27474;
 
 body{
     *{
-        font-family: "Montserrat", "Pretendard", sans-serif;
-        font-weight: 400; 
+        font-family: "GmarketSansMedium", "Pretendard", sans-serif;
+        font-weight: 400;
     }
 }
 
 h1,h2,h3,h4,p,ul,li,dl,dt,dd{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 a{
     text-decoration: none;
-    color: $actvieColor;
+    color: white;
 }
+.hd_font{
+    height:60px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.fw300{
+    font-weight: 300 !important;
+}
+.fw500{
+    font-weight: 500 !important;
+}
+.fw900{
+    font-weight: 900 !important;
+}
+
+#mainbanner{
+    width: 100%;
+    height: 100vh;
+    background-color: #c27474;
+    p{
+        font-size: 5rem;
+        line-height:7.5rem;
+    }  
+    .divpost{
+        width: 30rem;
+        height: 35rem;
+        background-color: wheat;
+        
+        .spanbox{
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border: black 0.5px solid;
+        }
+        .changing-text {
+            font-size: 24px;
+            font-weight: bold;
+            width: 220px;
+            text-align: left; 
+        }
+  
+    }
+}
+
+
+.swiper {
+    width: 100%;
+    height: 25rem;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bi{
+    color:white;
+  }
