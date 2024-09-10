@@ -51,4 +51,21 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // about me
+    const tabImages = document.querySelectorAll('.tab-img');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabImages.forEach(img => {
+        img.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+
+            tabPanes.forEach(pane => {
+                pane.classList.remove('active');
+            });
+            document.getElementById(targetTab).classList.add('active');
+        });
+    });
+
+
 });
+

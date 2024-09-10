@@ -33,6 +33,16 @@ a{
     font-weight: 900 !important;
 }
 
+.commonbtn{
+    padding:0.5rem 1rem;
+    background-color: #c27474;
+    border-radius: 10px;
+    color:white;
+    &:hover{
+        color: black;
+    }
+ }
+
 #mainbanner{
     width: 100%;
     height: 100vh;
@@ -62,20 +72,63 @@ a{
     }
 }
 
+#aboutme{
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+ .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+  .tab-content {
+    margin-top: 20px;
+}
 
-.swiper {
+.tab-pane {
+    display: none; 
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-img {
+    cursor: pointer;
+    margin-right: 10px;
+    width: 50px;
+}
+.tab-img:hover {
+    opacity: 0.8; 
+}
+}
+
+#project{
+ .projectbtn{
+    padding:0.5rem 1rem;
+    background-color: #c27474;
+    border-radius: 10px;
+    color:white;
+    &:hover{
+        color: black;
+    }
+ }
+}
+    .swiper {
     width: 100%;
-    height: 25rem;
+    height: 100%;
   }
 
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
+    width: 415px;
   }
 
   .swiper-slide img {
@@ -85,6 +138,8 @@ a{
     object-fit: cover;
   }
 
+
   .bi{
     color:white;
   }
+
