@@ -23,6 +23,11 @@ a {
   font-weight: 300 !important;
 }
 
+@media (max-width: 566px) {
+  .fw300 {
+    display: none;
+  }
+}
 .fw500 {
   font-weight: 500 !important;
 }
@@ -47,8 +52,8 @@ a {
   background-color: #c27474;
 }
 #mainbanner p {
-  font-size: 5rem;
-  line-height: 7.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 #mainbanner .divpost {
   width: 30rem;
@@ -67,7 +72,16 @@ a {
   width: 220px;
   text-align: left;
 }
+#mainbanner img {
+  width: 30px;
+  height: 30px;
+}
 
+@media (max-width: 991px) {
+  .divpost {
+    display: none !important;
+  }
+}
 #aboutme img {
   width: 100%;
   height: 100%;
@@ -129,6 +143,17 @@ a {
      object-fit: cover;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
+
+@media (max-width: 567px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
 .bi {
   color: white;
 }
