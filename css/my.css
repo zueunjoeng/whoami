@@ -15,7 +15,7 @@ a {
 }
 
 .hd_font {
-  height: 60px;
+  height: 3.75rem;
   border-bottom: 1px solid #d6d6d6;
 }
 
@@ -23,7 +23,7 @@ a {
   font-weight: 300 !important;
 }
 
-@media (max-width: 566px) {
+@media (max-width: 575px) {
   .fw300 {
     display: none;
   }
@@ -48,8 +48,8 @@ a {
 
 #mainbanner {
   width: 100%;
-  height: 100vh;
-  background-color: #c27474;
+  height: 100%;
+  background: linear-gradient(312deg, #FBD8E4 50.45%, #F1E0DC 63.67%, #F5DEDD 75.3%, #EEE3DC 82.08%, #E5E9DC 85.36%);
 }
 #mainbanner p {
   font-size: 3rem;
@@ -64,22 +64,35 @@ a {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  border: black 0.5px solid;
+  border: 0.5px solid black;
 }
 #mainbanner .divpost .changing-text {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  width: 220px;
+  width: 13.75rem;
   text-align: left;
 }
 #mainbanner img {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+#mainbanner .backimg {
+  width: 50rem;
+  height: 50rem;
+  background-image: url("/img/CK_ta01150003487.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 991px) {
   .divpost {
     display: none !important;
+  }
+}
+@media (max-width: 575px) {
+  .backimg {
+    width: 31.25rem !important;
+    height: 31.25rem !important;
   }
 }
 #aboutme img {
@@ -92,7 +105,7 @@ a {
   font-weight: 300;
 }
 #aboutme .tab-content {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 #aboutme .tab-pane {
   display: none;
@@ -102,8 +115,8 @@ a {
 }
 #aboutme .tab-img {
   cursor: pointer;
-  margin-right: 10px;
-  width: 50px;
+  margin-right: 0.625rem;
+  width: 3.125rem;
 }
 #aboutme .tab-img:hover {
   opacity: 0.8;
@@ -126,13 +139,13 @@ a {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  width: 415px;
+  height: 18.75rem;
+  width: 25.9375rem;
 }
 
 .swiper-slide img {
@@ -148,7 +161,7 @@ a {
   color: white;
 }
 
-@media (max-width: 567px) {
+@media (max-width: 575px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important;

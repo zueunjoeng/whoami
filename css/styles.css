@@ -3173,12 +3173,21 @@ textarea.form-control-lg {
 .collapse:not(.show) {
   display: none;
 }
+/* 추가 */
+.collapse.show {
+  background-color: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(10px);
+}
 
 .collapsing {
   height: 0;
   overflow: hidden;
   transition: height 0.35s ease;
+  /* 추가 */
+  background-color: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(10px);
 }
+
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
     transition: none;
@@ -3801,6 +3810,7 @@ textarea.form-control-lg {
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: var(--bs-navbar-active-color);
+  
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -3832,6 +3842,7 @@ textarea.form-control-lg {
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
+  
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -10882,7 +10893,7 @@ p {
 }
 
 #mainNav {
-  background-color: #212529;
+  background-color: transparent;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10908,7 +10919,7 @@ p {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ffc800;
+  color: lightcoral;
 }
 
 @media (min-width: 992px) {
@@ -10928,7 +10939,8 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
